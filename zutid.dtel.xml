@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZUTID</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZUTID</DOMNAME>
+    <HEADLEN>55</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Terminal ID</DDTEXT>
+    <REPTEXT>Terminal ID</REPTEXT>
+    <SCRTEXT_S>TID</SCRTEXT_S>
+    <SCRTEXT_M>Terminal ID</SCRTEXT_M>
+    <SCRTEXT_L>Terminal ID</SCRTEXT_L>
+    <APPLCLASS>STSK</APPLCLASS>
+    <DTELMASTER>D</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>1</LANGU>
+    <LANGU>2</LANGU>
+    <LANGU>3</LANGU>
+    <LANGU>6</LANGU>
+    <LANGU>B</LANGU>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>F</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>I</LANGU>
+    <LANGU>J</LANGU>
+    <LANGU>L</LANGU>
+    <LANGU>M</LANGU>
+    <LANGU>N</LANGU>
+    <LANGU>P</LANGU>
+    <LANGU>Q</LANGU>
+    <LANGU>R</LANGU>
+    <LANGU>S</LANGU>
+    <LANGU>W</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>1</DDLANGUAGE>
+     <SCRTEXT_S>TID</SCRTEXT_S>
+    </item>
+    <item>
+     <DDLANGUAGE>2</DDLANGUAGE>
+     <DDTEXT>รหัสเทอร์มินัล</DDTEXT>
+     <REPTEXT>รหัสเทอร์มินัล</REPTEXT>
+     <SCRTEXT_S>TID</SCRTEXT_S>
+     <SCRTEXT_M>รหัสเทอร์มินัล</SCRTEXT_M>
+     <SCRTEXT_L>รหัสเทอร์มินัล</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>3</DDLANGUAGE>
+     <DDTEXT>단말기 ID</DDTEXT>
+     <REPTEXT>단말기 ID</REPTEXT>
+     <SCRTEXT_S>TID</SCRTEXT_S>
+     <SCRTEXT_M>단말기 ID</SCRTEXT_M>
+     <SCRTEXT_L>단말기 ID</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>6</DDLANGUAGE>
+     <DDTEXT>ID terminala</DDTEXT>
+     <REPTEXT>ID terminala</REPTEXT>
+     <SCRTEXT_S>TID</SCRTEXT_S>
+     <SCRTEXT_M>ID terminala</SCRTEXT_M>
+     <SCRTEXT_L>ID terminala</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>B</DDLANGUAGE>
+     <DDTEXT>זיהוי מסוף</DDTEXT>
+     <REPTEXT>זיהוי מסוף</REPTEXT>
+     <SCRTEXT_M>זיהוי מסוף</SCRTEXT_M>
+     <SCRTEXT_L>זיהוי מסוף</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Identifikace terminálu</DDTEXT>
+     <REPTEXT>Identifikace terminálu</REPTEXT>
+     <SCRTEXT_S>TID</SCRTEXT_S>
+     <SCRTEXT_M>ID terminálu</SCRTEXT_M>
+     <SCRTEXT_L>ID terminálu</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Terminal-Identifikation</DDTEXT>
+     <REPTEXT>Terminal-Identifikation</REPTEXT>
+     <SCRTEXT_S>TID</SCRTEXT_S>
+     <SCRTEXT_M>Terminal-ID</SCRTEXT_M>
+     <SCRTEXT_L>Terminal-ID</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>F</DDLANGUAGE>
+     <DDTEXT>ID du terminal</DDTEXT>
+     <REPTEXT>ID du terminal</REPTEXT>
+     <SCRTEXT_S>TID</SCRTEXT_S>
+     <SCRTEXT_M>ID terminal</SCRTEXT_M>
+     <SCRTEXT_L>ID terminal</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Terminál-azonosítás</DDTEXT>
+     <REPTEXT>Terminál-azonosítás</REPTEXT>
+     <SCRTEXT_S>TID</SCRTEXT_S>
+     <SCRTEXT_M>Terminál-ID</SCRTEXT_M>
+     <SCRTEXT_L>Terminál-ID</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Identificazione terminale</DDTEXT>
+     <REPTEXT>Identificazione terminale</REPTEXT>
+     <SCRTEXT_S>TID</SCRTEXT_S>
+     <SCRTEXT_M>ID terminale</SCRTEXT_M>
+     <SCRTEXT_L>ID terminale</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>J</DDLANGUAGE>
+     <DDTEXT>端末 ID</DDTEXT>
+     <REPTEXT>端末 ID</REPTEXT>
+     <SCRTEXT_S>TID</SCRTEXT_S>
+     <SCRTEXT_M>端末 ID</SCRTEXT_M>
+     <SCRTEXT_L>端末 ID</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>L</DDLANGUAGE>
+     <DDTEXT>Niewidoczny TID dla SM04</DDTEXT>
+     <REPTEXT>ID terminala</REPTEXT>
+     <SCRTEXT_S>TID</SCRTEXT_S>
+     <SCRTEXT_M>ID terminala</SCRTEXT_M>
+     <SCRTEXT_L>ID terminala</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>M</DDLANGUAGE>
+     <DDTEXT>終端機 ID</DDTEXT>
+     <REPTEXT>終端機 ID</REPTEXT>
+     <SCRTEXT_S>終端機 ID</SCRTEXT_S>
+     <SCRTEXT_M>終端機 ID</SCRTEXT_M>
+     <SCRTEXT_L>終端機 ID</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Terminal-identificatie</DDTEXT>
+     <REPTEXT>Terminal-identificatie</REPTEXT>
+     <SCRTEXT_S>TID</SCRTEXT_S>
+     <SCRTEXT_M>Terminal-ID</SCRTEXT_M>
+     <SCRTEXT_L>Terminal-ID</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>P</DDLANGUAGE>
+     <DDTEXT>Identificação terminal</DDTEXT>
+     <REPTEXT>Identificação terminal</REPTEXT>
+     <SCRTEXT_S>IDT</SCRTEXT_S>
+     <SCRTEXT_M>ID do terminal</SCRTEXT_M>
+     <SCRTEXT_L>ID do terminal</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>Q</DDLANGUAGE>
+     <DDTEXT>Identifikácia terminálu</DDTEXT>
+     <REPTEXT>Identifikácia terminálu</REPTEXT>
+     <SCRTEXT_S>TID</SCRTEXT_S>
+     <SCRTEXT_M>ID terminálu</SCRTEXT_M>
+     <SCRTEXT_L>ID terminálu</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>R</DDLANGUAGE>
+     <DDTEXT>Идентификатор терминала</DDTEXT>
+     <REPTEXT>Идентификатор терминала</REPTEXT>
+     <SCRTEXT_S>ИдТ</SCRTEXT_S>
+     <SCRTEXT_M>ИдТерминала</SCRTEXT_M>
+     <SCRTEXT_L>ИдТерминала</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>S</DDLANGUAGE>
+     <DDTEXT>Identificación de terminal</DDTEXT>
+     <REPTEXT>Identificación terminal</REPTEXT>
+     <SCRTEXT_S>TID</SCRTEXT_S>
+     <SCRTEXT_M>ID de terminal</SCRTEXT_M>
+     <SCRTEXT_L>ID de terminal</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>W</DDLANGUAGE>
+     <DDTEXT>ID на терминал</DDTEXT>
+     <REPTEXT>ID на терминал</REPTEXT>
+     <SCRTEXT_S>IDT</SCRTEXT_S>
+     <SCRTEXT_M>ID на терминал</SCRTEXT_M>
+     <SCRTEXT_L>ID на терминал</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

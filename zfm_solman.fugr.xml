@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>ZFM_SOLMAN</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFM_SOLMANTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFM_SOLMAN</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFM_RFC_SPOOL_REQ</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>ZFM_RFC_SPOOL_REQ</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_FROM_TIME</PARAMETER>
+       <TYP>RSPOCRETIM</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_TO_TIME</PARAMETER>
+       <TYP>RSPOCRETIM</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>IT_SPL_DETL</PARAMETER>
+       <TYP>ZTTSPL_DETL</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_DATA_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_FROM_TIME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Time spool request was created</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_TO_TIME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Time spool request was created</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_SPL_DETL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ZTTSPL_DETL</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_DATA_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>no data found</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFM_RFC_TRFC_DETAILS</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>ZFM_RFC_TRFC_DETAILS</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_FROM_TIME</PARAMETER>
+       <TYP>CHAR14</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_TO_TIME</PARAMETER>
+       <TYP>CHAR14</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>IT_RFC_DETL</PARAMETER>
+       <TYP>ZTTSTRFC_DETL</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_DATA_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_FROM_TIME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Text field length 14</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_TO_TIME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Text field length 14</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_RFC_DETL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ZSTRFC_DETL</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_DATA_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>no data found</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

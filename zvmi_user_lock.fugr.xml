@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>ZVMI_USER_LOCK</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZVMI_USER_LOCKF01</SOBJ_NAME>
+    <SOBJ_NAME>LZVMI_USER_LOCKTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZVMI_USER_LOCK</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZZSUSR_RFC_USER_INTERFACE</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Von externen Systemen Benutzer...  ( !!! wird zu 4.0C abgelöst !!)</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>USER</PARAMETER>
+       <DBFIELD>USR02-BNAME</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>ACTIVITY</PARAMETER>
+       <DBFIELD>AUTHB-ACTVT</DBFIELD>
+       <DEFAULT>&apos;03&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PASSWORD</PARAMETER>
+       <DBFIELD>XU213-BCODE</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>USER_GROUP</PARAMETER>
+       <DBFIELD>USR02-CLASS</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>VALID_FROM</PARAMETER>
+       <DBFIELD>USR02-GLTGV</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>VALID_UNTIL</PARAMETER>
+       <DBFIELD>USR02-GLTGB</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>USER_TYPE</PARAMETER>
+       <DBFIELD>USR02-USTYP</DBFIELD>
+       <DEFAULT>&apos;A&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>ACCOUNT</PARAMETER>
+       <DBFIELD>USR02-ACCNT</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>EXT_NAME</PARAMETER>
+       <DBFIELD>USR15-LONGNAME</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>USER_GROUP</PARAMETER>
+       <DBFIELD>USR02-CLASS</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>USER_STATE</PARAMETER>
+       <DBFIELD>USR02-UFLAG</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>VALID_FROM</PARAMETER>
+       <DBFIELD>USR02-GLTGV</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>VALID_UNTIL</PARAMETER>
+       <DBFIELD>USR02-GLTGB</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>USER_TYPE</PARAMETER>
+       <DBFIELD>USR02-USTYP</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EXT_NAME</PARAMETER>
+       <DBFIELD>USR15-LONGNAME</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>ACCOUNT</PARAMETER>
+       <DBFIELD>USR02-ACCNT</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>MODIFIER</PARAMETER>
+       <DBFIELD>USR02-ANAME</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>MODDATE</PARAMETER>
+       <DBFIELD>USR02-ERDAT</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>LOGIN_DATE</PARAMETER>
+       <DBFIELD>USR02-TRDAT</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>LOGIN_TIME</PARAMETER>
+       <DBFIELD>USR02-LTIME</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EX_MSGTYPE</PARAMETER>
+       <TYP>CHAR01</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EX_MSGNAME</PARAMETER>
+       <TYP>BAPI_MSG</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>USER_DEFAULTS</PARAMETER>
+       <DBSTRUCT>USR01</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>USER_ADDRESS</PARAMETER>
+       <DBSTRUCT>USR03</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>USER_PARAMETERS</PARAMETER>
+       <DBSTRUCT>USR05</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>USER_PROFILES</PARAMETER>
+       <DBSTRUCT>US334</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>USER_DONT_EXIST</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>USER_ALLREADY_EXISTS</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>NOT_AUTHORIZED</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>USERNAME_REQUIRED</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>BAD_METHOD</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>PASSWORD_REQUIRED</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>USERGROUP_DONT_EXIST</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>BAD_TIME_RAGE</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>BAD_USERTYPE</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>UPDATE_ERROR</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>USER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User Name</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ACTIVITY</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PASSWORD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Initial Password</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>USER_GROUP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User Group</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VALID_FROM</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VALID_UNTIL</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>USER_TYPE</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ACCOUNT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Accounting Number</STEXT>
+       <INDEX> 008</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EXT_NAME</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 009</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>USER_GROUP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User Group</STEXT>
+       <INDEX> 010</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>USER_STATE</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 011</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VALID_FROM</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 012</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VALID_UNTIL</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 013</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>USER_TYPE</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 014</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EXT_NAME</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 015</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ACCOUNT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Accounting Number</STEXT>
+       <INDEX> 016</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>MODIFIER</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 017</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>MODDATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Date of Last Change</STEXT>
+       <INDEX> 018</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LOGIN_DATE</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 019</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LOGIN_TIME</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 020</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_MSGTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Message type: S Success, E Error, W Warning, I Info, A Abort</STEXT>
+       <INDEX> 021</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_MSGNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Message Text</STEXT>
+       <INDEX> 022</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>USER_DEFAULTS</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 023</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>USER_ADDRESS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User address</STEXT>
+       <INDEX> 024</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>USER_PARAMETERS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Set/Get Parameter</STEXT>
+       <INDEX> 025</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>USER_PROFILES</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Authorization Profiles</STEXT>
+       <INDEX> 026</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>USER_DONT_EXIST</PARAMETER>
+       <KIND>X</KIND>
+       <INDEX> 027</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>USER_ALLREADY_EXISTS</PARAMETER>
+       <KIND>X</KIND>
+       <INDEX> 028</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NOT_AUTHORIZED</PARAMETER>
+       <KIND>X</KIND>
+       <INDEX> 029</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>USERNAME_REQUIRED</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>User name is missing</STEXT>
+       <INDEX> 030</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>BAD_METHOD</PARAMETER>
+       <KIND>X</KIND>
+       <INDEX> 031</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PASSWORD_REQUIRED</PARAMETER>
+       <KIND>X</KIND>
+       <INDEX> 032</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>USERGROUP_DONT_EXIST</PARAMETER>
+       <KIND>X</KIND>
+       <INDEX> 033</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>BAD_TIME_RAGE</PARAMETER>
+       <KIND>X</KIND>
+       <INDEX> 034</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>BAD_USERTYPE</PARAMETER>
+       <KIND>X</KIND>
+       <INDEX> 035</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>UPDATE_ERROR</PARAMETER>
+       <KIND>X</KIND>
+       <INDEX> 036</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

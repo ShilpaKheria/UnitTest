@@ -1,0 +1,1021 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Basis Function Groups</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGW_BASIS_FUNC_GRPTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGW_BASIS_FUNC_GRP</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZBS_ODATA_SERVNAME</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>ZBS_ODATA_SERVNAME</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>IT_ODATA_SERV</PARAMETER>
+       <TYP>ZBT_ODATA_SERV</TYP>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_DATA_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IT_ODATA_SERV</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ZBT_ODATA_SERV</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_DATA_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>No data found</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZDUMP_OVERVIEW</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Overview of the ABAP Dumps</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>FRMDATESTMP</PARAMETER>
+       <TYP>TIMESTAMP</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>TODATESTMP</PARAMETER>
+       <TYP>TIMESTAMP</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>GS_TITLE</PARAMETER>
+       <TYP>STRING</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>GS_RETURN</PARAMETER>
+       <TYP>BAPIRET2</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>GT_FINAL</PARAMETER>
+       <DBSTRUCT>ZDUMPOVERVIEW</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>FRMDATESTMP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>UTC Time Stamp in Short Form (YYYYMMDDhhmmss)</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TODATESTMP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>UTC Time Stamp in Short Form (YYYYMMDDhhmmss)</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>GS_TITLE</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>GS_RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>GT_FINAL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ABAP Dump Overview</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFM_DB_BACKUP_REPORT_V3</FUNCNAME>
+     <SHORT_TEXT>RFC FM for ZDB_REPORT</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>DATE</PARAMETER>
+       <TYP>SY-DATUM</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>TODAY</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>CHAR1</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>WEEKLY</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>CHAR1</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>MONTHLY</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>CHAR1</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>RESULT_TAB</PARAMETER>
+       <TYP>ZDB_FM_STRUC_TT</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_ENTRIES_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>DATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Current Date of Application Server</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TODAY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Single-Character Indicator</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>WEEKLY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Single-Character Indicator</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>MONTHLY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Single-Character Indicator</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RESULT_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>DB Structure</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_ENTRIES_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>No data found for the given date</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFM_IDOC_FAILURE</FUNCNAME>
+     <SHORT_TEXT>Automation to monitor IDOC Failure</SHORT_TEXT>
+    </item>
+    <item>
+     <FUNCNAME>ZFM_INBOUND_FAILURE</FUNCNAME>
+     <SHORT_TEXT>fm for inbound failure</SHORT_TEXT>
+    </item>
+    <item>
+     <FUNCNAME>ZFM_USER_LOCK_UNLOCK_V3</FUNCNAME>
+     <SHORT_TEXT>FM for locking Unlocking Users</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_LOCK_UNLOCK_FLAG</PARAMETER>
+       <TYP>ZGW_LOCK_UNLOCK_FLAG</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_ERROR_STR</PARAMETER>
+       <TYP>STRING</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>S_BNAME</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZTY_BNAME</TYP>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_LOCK_UNLOCK_FLAG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Mass Lock/Unlock Flag</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_ERROR_STR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Error Message</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>S_BNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ABAP: General Structure for PARAMETERS and SELECT-OPTIONS</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZGET_USERSESS_V3</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>RFC to get User Sessions</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IM_USERNAME</PARAMETER>
+       <TYP>SYUNAME</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ET_USERSESS</PARAMETER>
+       <TYP>ZTT_UINF02_V3</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NOOPENSESSION</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>ENTERUSERNAME</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IM_USERNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User Name</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_USERSESS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table type for User Sessions</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NOOPENSESSION</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>No open sessions exist for given User</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ENTERUSERNAME</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Enter the User name</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZGW_KILL_USERSESS_V3</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Kill user sessions</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IM_CLIENT</PARAMETER>
+       <TYP>MANDT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IM_USERNAME</PARAMETER>
+       <TYP>UBNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IM_TID</PARAMETER>
+       <TYP>UTID</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>AUTHORITY_ERROR</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>UNKNOWN_ERROR</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IM_CLIENT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Client</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IM_USERNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User Name</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IM_TID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Terminal ID</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>AUTHORITY_ERROR</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Autorization error</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>UNKNOWN_ERROR</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Unknown Error</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZGW_SICF_GET_ROOT_NODES</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>SICF Get Virtual Hosts</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ET_ROOT_NODES</PARAMETER>
+       <DBSTRUCT>ZGW_ROOT_NODE</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_ENTRIES_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>ET_ROOT_NODES</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Virtual Nodes</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_ENTRIES_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>No entries found</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZGW_USERS_GET</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Basis: Get Users</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IM_REC_COUNT</PARAMETER>
+       <TYP>ZGW_REC_COUNT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IM_FILTER_DATA</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZGW_USER_MASTER_REC</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EX_PACKET_COUNT</PARAMETER>
+       <TYP>ZGW_REC_COUNT</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>RESULT_LIST</PARAMETER>
+       <DBSTRUCT>ZGW_USER_MASTER_REC</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_ENTRIES_FOUND</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>PACKET_SIZE_ZERO</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IM_REC_COUNT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Record Count</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IM_FILTER_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User Master Record</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_PACKET_COUNT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Record Count</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RESULT_LIST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User Master Record</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_ENTRIES_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>No Entries Found</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PACKET_SIZE_ZERO</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Packet size cannot be zero</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZGW_USER_LOCK_UNLOCK_V3</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>GW RFC Wrapper FM for mass lock/unlock users</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_EXCEPTION_STRING</PARAMETER>
+       <TYP>STRING</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>CANT_CREATE_JOB</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>INVALID_JOB_DATA</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>JOBNAME_MISSING</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>CANT_START_IMMEDIATE</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>INVALID_STARTDATE</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>JOB_CLOSE_FAILED</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>JOB_NOSTEPS</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>JOB_NOTEX</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>LOCK_FAILED</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>INVALID_TARGET</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>UNLOCK_ERROR</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_EXCEPTION_STRING</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Exception user list</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CANT_CREATE_JOB</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Job cannot be created, see system log</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>INVALID_JOB_DATA</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Job Contains Invalid Job Data, See SYSLOG</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>JOBNAME_MISSING</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Job Name Not Specified</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CANT_START_IMMEDIATE</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Cannot Start Immediately</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>INVALID_STARTDATE</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Start Condition is Invalid</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>JOB_CLOSE_FAILED</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Error During JOB_CLOSE, See SYSLOG</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>JOB_NOSTEPS</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Job Specified Does Not Contain Any Steps</STEXT>
+       <INDEX> 008</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>JOB_NOTEX</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Specified Job Does Not Exist</STEXT>
+       <INDEX> 009</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LOCK_FAILED</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Lock Attempt Failed</STEXT>
+       <INDEX> 010</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>INVALID_TARGET</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Target Server or Group is Invalid</STEXT>
+       <INDEX> 011</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>UNLOCK_ERROR</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Unknown Error</STEXT>
+       <INDEX> 012</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZINBOUND_FAIL</FUNCNAME>
+     <SHORT_TEXT>test for inbound fail</SHORT_TEXT>
+    </item>
+    <item>
+     <FUNCNAME>ZSICF_SERVICE_ACTIVATION_V3</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>SICF service activation</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>ICF_SERV</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ICFALTNME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>S_PATH</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ICFREQUEST_PATH</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_ACTIVATE</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BOOLEAN</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_DEACTIVATE</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BOOLEAN</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ES_INT_ICFINSTACT</PARAMETER>
+       <TYP>ICFINSTACT</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NODE_NOT_EXISTING</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>ENQUEUE_ERROR</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>NO_AUTHORITY</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>URL_AND_NODEGUID_SPACE</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>URL_AND_NODEGUID_FILL_IN</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>NO_INPUT_AVAILABLE</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>ALREADY_ACTIVE</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>ICF_SERV</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ICF: Alternative Service Name</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>S_PATH</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Path of ICF Request</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_ACTIVATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Boolean Variable (X=True, -=False, Space=Unknown)</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_DEACTIVATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Boolean Variable (X=True, -=False, Space=Unknown)</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ES_INT_ICFINSTACT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ICF: Table for Activating Services in Installation</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NODE_NOT_EXISTING</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Service not available</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ENQUEUE_ERROR</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Lock error</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_AUTHORITY</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>No authorization</STEXT>
+       <INDEX> 008</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>URL_AND_NODEGUID_SPACE</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>URL incorrect</STEXT>
+       <INDEX> 009</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>URL_AND_NODEGUID_FILL_IN</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>URL inconsistency. Activate URL manually</STEXT>
+       <INDEX> 010</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_INPUT_AVAILABLE</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>No input is available</STEXT>
+       <INDEX> 011</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ALREADY_ACTIVE</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Selected Service is already in Active Status</STEXT>
+       <INDEX> 012</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZSICF_SERVICE_DETAIL_V3</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>SICF Service List</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_ROOT_NODE</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ICFNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_FLAG</PARAMETER>
+       <TYP>ICFALIFLAG</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_COUNT</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZGW_REC_COUNT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_STRING</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>STRING</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>IE_LINE_COUNT</PARAMETER>
+       <TYP>ZGW_REC_COUNT</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>ET_RETURN_SERV</PARAMETER>
+       <TYP>ZGW_SICFLIST_TT</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_ENTRIES_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_ROOT_NODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name of a Service in Internet Communication Framework</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_FLAG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Flag: &apos;X&apos; -&gt; Alias in ICF Service, &apos; &apos; -&gt; Description</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_COUNT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Natural Number</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_STRING</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Text field length 200</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IE_LINE_COUNT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Natural Number</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_RETURN_SERV</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>SICF Table Type</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_ENTRIES_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>No entries found</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZSICF_SERVICE_NAME_V3</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Service name</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>ICF_SERV</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ICFALTNME</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>L_RETTAB</PARAMETER>
+       <DBSTRUCT>DDSHRETVAL</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>IT_FINAL</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZSERVICE_NAME</TYP>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_DATA_AVAILABLE</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>ICF_SERV</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ICF: Alternative Service Name</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>L_RETTAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Interface Structure Search Help &lt;-&gt; Help System</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_FINAL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Service name details</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_DATA_AVAILABLE</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Service paths are not available</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZSICF_SERVICE_PATH_V3</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>F4 help for Service path</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_SERVICE_PATH</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ICFREQUEST_PATH</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>IT_RETURN</PARAMETER>
+       <DBSTRUCT>DDSHRETVAL</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>IT_FINAL</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZSERVICE_PATH</TYP>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_DATA_AVAILABLE</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_SERVICE_PATH</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Path of ICF Request</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Interface Structure Search Help &lt;-&gt; Help System</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_FINAL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ICF: Table for Activating Services in Installation</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_DATA_AVAILABLE</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Service paths are not available</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZSM04_RFC_V3</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>RFC for ZSM04 - User killing session</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IM_USERNAME</PARAMETER>
+       <TYP>SYUNAME</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EX_MSGTYPE</PARAMETER>
+       <TYP>BAPI_MTYPE</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EX_MESSAGE</PARAMETER>
+       <TYP>BAPI_MSG</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IM_USERNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User Name</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_MSGTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Message type: S Success, E Error, W Warning, I Info, A Abort</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_MESSAGE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Message Text</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZZFM_IDOC_FAILURE</FUNCNAME>
+     <SHORT_TEXT>Automation to monitor IDOC Failure</SHORT_TEXT>
+    </item>
+    <item>
+     <FUNCNAME>Z_ECCERP_LOCK_USER_V3</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Lock user</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IM_USERNAME</PARAMETER>
+       <TYP>SYUNAME</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EX_MSGTYPE</PARAMETER>
+       <TYP>BAPI_MTYPE</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EX_MSGNAME</PARAMETER>
+       <TYP>BAPI_MSG</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IM_USERNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User Name</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_MSGTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Message type: S Success, E Error, W Warning, I Info, A Abort</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_MSGNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Message Text</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_ECCERP_UNLOCK_USER_V3</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Lock user</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IM_USERNAME</PARAMETER>
+       <TYP>SYUNAME</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EX_MSGTYPE</PARAMETER>
+       <TYP>BAPI_MTYPE</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EX_MSGNAME</PARAMETER>
+       <TYP>BAPI_MSG</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IM_USERNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User Name</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_MSGTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Message type: S Success, E Error, W Warning, I Info, A Abort</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_MSGNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Message Text</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

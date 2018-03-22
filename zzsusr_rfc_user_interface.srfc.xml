@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SRFC" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SRFC>
+    <HEADER>
+     <ID>ZZSUSR_RFC_USER_INTERFACE</ID>
+     <VERSION>A</VERSION>
+     <FUNCNAME>ZZSUSR_RFC_USER_INTERFACE</FUNCNAME>
+     <CREATEDBY>TESTUSR1</CREATEDBY>
+     <CREATEDON>2018-02-26</CREATEDON>
+     <CREATEDAT>07:25:37</CREATEDAT>
+    </HEADER>
+    <TEXT>
+     <ID>ZZSUSR_RFC_USER_INTERFACE</ID>
+     <VERSION>A</VERSION>
+     <LANG>E</LANG>
+     <SHORTTEXT>Default RFC Service for Function-Module: ZZSUSR_RFC_USER_INTERFACE</SHORTTEXT>
+    </TEXT>
+   </SRFC>
+  </asx:values>
+ </asx:abap>
+</abapGit>

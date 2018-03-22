@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZVSIZE</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>DB02N_NUMBER_15</DOMNAME>
+    <HEADLEN>20</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>20</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>DB Free Size</DDTEXT>
+    <REPTEXT>DB Free Size</REPTEXT>
+    <SCRTEXT_S>Free Size</SCRTEXT_S>
+    <SCRTEXT_M>DB Free Size</SCRTEXT_M>
+    <SCRTEXT_L>DB Free Size</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

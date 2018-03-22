@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SRFC" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SRFC>
+    <HEADER>
+     <ID>ZFM_RFC_SPOOL_REQ</ID>
+     <VERSION>A</VERSION>
+     <FUNCNAME>ZFM_RFC_SPOOL_REQ</FUNCNAME>
+     <CREATEDBY>TESTUSR1</CREATEDBY>
+     <CREATEDON>2018-01-28</CREATEDON>
+     <CREATEDAT>11:55:20</CREATEDAT>
+    </HEADER>
+    <TEXT>
+     <ID>ZFM_RFC_SPOOL_REQ</ID>
+     <VERSION>A</VERSION>
+     <LANG>E</LANG>
+     <SHORTTEXT>Default RFC Service for Function-Module: ZFM_RFC_SPOOL_REQ</SHORTTEXT>
+    </TEXT>
+   </SRFC>
+  </asx:values>
+ </asx:abap>
+</abapGit>
